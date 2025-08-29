@@ -15,33 +15,41 @@ To write a python program to implement Breadth first Search.
    
 ### Program:
 ```
-import math
+# BFS in Python
 
-def minimax(curDepth, nodeIndex, maxTurn, scores, targetDepth):
-    # base case : targetDepth reached
-    if curDepth == targetDepth:
-        return scores[nodeIndex]
+graph = {
+    '5': ['3', '7'],
+    '3': ['2', '4'],
+    '7': ['8'],
+    '2': [],
+    '4': ['8'],
+    '8': []
+}
 
-    if maxTurn:
-        return max(
-            minimax(curDepth + 1, nodeIndex * 2, False, scores, targetDepth),
-            minimax(curDepth + 1, nodeIndex * 2 + 1, False, scores, targetDepth)
-        )
-    else:
-        return min(
-            minimax(curDepth + 1, nodeIndex * 2, True, scores, targetDepth),
-            minimax(curDepth + 1, nodeIndex * 2 + 1, True, scores, targetDepth)
-        )
+visited = []  # List for visited nodes
+queue = []    # Initialize a queue
 
-# Driver code
-scores = [3, 5, 2, 9, 12, 5, 23, 20]
-treeDepth = int(math.log(len(scores), 2))  # depth = log2(n)
-print("The optimal value is:", minimax(0, 0, True, scores, treeDepth))
+def bfs(visited, graph, node):  # Function for BFS
+    visited.append(node)
+    queue.append(node)
+
+    while queue:  # Creating loop to visit each node
+        m = queue.pop(0)  # Dequeue
+        print(m, end=" ")
+
+        for neighbour in graph[m]:
+            if neighbour not in visited:
+                visited.append(neighbour)
+                queue.append(neighbour)
+
+# Driver Code
+print("Following is the Breadth-First Search:")
+bfs(visited, graph, '5')
 
 ```
 ### Output:
-<img width="502" height="139" alt="image" src="https://github.com/user-attachments/assets/713dcc91-26e2-4be5-81f0-16011942a0cb" />
 
+<img width="465" height="123" alt="image" src="https://github.com/user-attachments/assets/8d0bd372-ce39-423b-9087-dadb6f72e33f" />
 
 
 ### Result:
