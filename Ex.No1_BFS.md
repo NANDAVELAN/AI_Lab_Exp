@@ -12,19 +12,35 @@ To write a python program to implement Breadth first Search.
 6.  Creating loop to print the visited node.
 7.   Call the bfs function by passing arguments visited, graph and starting node.
 8.   Stop the program.
+   
 ### Program:
+```
+import math
 
+def minimax(curDepth, nodeIndex, maxTurn, scores, targetDepth):
+    # base case : targetDepth reached
+    if curDepth == targetDepth:
+        return scores[nodeIndex]
 
+    if maxTurn:
+        return max(
+            minimax(curDepth + 1, nodeIndex * 2, False, scores, targetDepth),
+            minimax(curDepth + 1, nodeIndex * 2 + 1, False, scores, targetDepth)
+        )
+    else:
+        return min(
+            minimax(curDepth + 1, nodeIndex * 2, True, scores, targetDepth),
+            minimax(curDepth + 1, nodeIndex * 2 + 1, True, scores, targetDepth)
+        )
 
+# Driver code
+scores = [3, 5, 2, 9, 12, 5, 23, 20]
+treeDepth = int(math.log(len(scores), 2))  # depth = log2(n)
+print("The optimal value is:", minimax(0, 0, True, scores, treeDepth))
 
-
-
-
-
-
-
-
+```
 ### Output:
+<img width="502" height="139" alt="image" src="https://github.com/user-attachments/assets/713dcc91-26e2-4be5-81f0-16011942a0cb" />
 
 
 
