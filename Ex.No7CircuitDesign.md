@@ -53,7 +53,8 @@ not(1, 0).
 ```
 
 ### Output:
-![Uploading image.png…]()
+<img width="960" height="308" alt="image" src="https://github.com/user-attachments/assets/1e384d9f-a83d-4293-9800-f392ccc2fdd7" />
+
 
 
 
