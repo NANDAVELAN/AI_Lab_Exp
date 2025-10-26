@@ -192,6 +192,9 @@ playlist = get_recommendations('Shape of You', data, cosine_sim)
 display(playlist)
 ```
 
+### Download the full code 
+[Download the Jupyter Notebook](./Music_recommendation_system.ipynb)
+
 ---
 
 ## **OUTPUT:**
