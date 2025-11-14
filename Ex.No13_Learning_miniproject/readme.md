@@ -1,6 +1,6 @@
 
 
-# 🎯 **Experiment No: 10 — Learning: Use Supervised Learning**
+# 🎯 **Experiment No: 13 — *Mini Project*
 
 ### **Date:** 25-10-2025
 
