@@ -1,4 +1,4 @@
-/# Ex.No: 5   Logic Programming – Factorial of number   
+# Ex.No: 5   Logic Programming – Factorial of number   
 ### DATE:   12/09/2025                                                                         
 ### REGISTER NUMBER : 212223060182
 
